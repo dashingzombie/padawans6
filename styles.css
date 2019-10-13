@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap');
+
+body, html
+{
+   height: 100%;
+
+}
+
+body
+{
+   background-color: #8b0000;
+}
+
+h1
+{
+   margin: 6rem;
+   color: white;
+   text-align: center;
+   font-family: 'Permanent Marker', cursive;
+   font-size: 550%;
+}
+
+
+
+main
+{
+   display: grid;
+   align-items: left;
+   grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+   grid-gap: 0.001rem;
+}
+
+.card
+{
+   box-shadow: 5 4px 8px 0 rgba(255,255,255,0.2);
+   position: relative;
+   border-radius: 50%;
+   margin: 1rem;
+   -webkit-transition: -webkit-transform 10px;
+   transition: -webkit-transform 10px;
+   transition: transform 10px;
+   transition: transform 10px, -webkit-transform 10px;
+}
+
+.card img
+{
+   display: circle;
+   margin-left: auto;
+   margin-right: auto;
+   width: 100%;
+   border-radius: 50%;
+}
+.overlay
+{
+   position: absolute;
+   top: 0;
+   bottom: 0;
+   left: 0;
+   right: 0;
+   height: 100%;
+   width: 100%;
+   border-radius: 50%;
+   opacity: 0;
+   transition: .5s ease;
+   background-color: #008CBA;
+
+}
+
+.card:hover
+{
+   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+   -webkit-transform: translateY(-10px);
+}
+
+.card:hover .overlay
+{
+   opacity: 1;
+   -webkit-transform: translateY(-10px);
+           transform: translateY(-10px);
+}
+
+.text
+{
+   color: white;
+   font-family: 'Permanent Marker', cursive;
+   font-size: 100px;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   -webkit-transform: translate(-50%, -50%);
+   transform: translate(-50%, -50%);
+}
